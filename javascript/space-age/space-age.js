@@ -6,16 +6,19 @@
 const EARTH_YEAR_SECONDS = 31557600;
 
 const ORBITAL_PERIOD_RATES = {
-    'mercury' : 0.2408467,
-    'venus' :  0.61519726,
-    'earth' : 1.00,
-    'mars' : 1.8808158,
-    'jupiter' : 11.862615,
-    'saturn' : 29.447498,
-    'uranus' : 84.016846,
-    'neptune' : 164.79132
+    'Mercury' : 0.2408467,
+    'Venus' :  0.61519726,
+    'Earth' : 1.00,
+    'Mars' : 1.8808158,
+    'Jupiter' : 11.862615,
+    'Saturn' : 29.447498,
+    'Uranus' : 84.016846,
+    'Neptune' : 164.79132
 };
 
+// account for the capital letter of each planet
+const capitalize = string => string[0].toUpperCase() + string.slice(1).toLowerCase();
+
 export const age = (planet, seconds) => {
-    return +(seconds / (EARTH_YEAR_SECONDS * ORBITAL_PERIOD_RATES[planet.toLowerCase()])).toFixed(2);
+    return +(seconds / (EARTH_YEAR_SECONDS * ORBITAL_PERIOD_RATES[capitalize(planet)])).toFixed(2);
 };

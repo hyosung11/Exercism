@@ -53,3 +53,19 @@ Partially inspired by Chapter 1 in Chris Pine's online Learn to Program tutorial
 
 It's possible to submit an incomplete solution so you can see how others have
 completed the exercise.
+
+## Mentor Notes
+Yes, your code is correct!
+
+Note that the most important is that your keys are coherent between themselves. After you can normalize your input to have the same structure as your keys. So if you do planet.toLowerCase(), you are lowercasing the input but not your keys!!!
+
+So if you want to have capitalized keys, you have to capitalize the input too. For example:
+
+```
+// There is no built-in function for that, but this is simple enough...
+const capitalize = string => string[0].toUpperCase() + string.slice(1).toLowerCase();
+
+export const age = (planet, seconds) => {
+    return +(seconds / (EARTH_YEAR_SECONDS * ORBITAL_PERIOD_RATES[capitalize(planet)])).toFixed(2);
+};
+```
