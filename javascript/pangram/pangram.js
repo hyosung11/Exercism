@@ -3,15 +3,22 @@
 // convenience to get you started writing code faster.
 //
 
-const ALPHABET_LENGTH = 26;
+// const ALPHABET_LENGTH = 26;
+//
+// export const isPangram = (sentence) => {
+//   let result = {}
+//   for (let char of sentence.toLowerCase()) {
+//     if (char.charCodeAt(0) >= 97 && char.charCodeAt(0) <= 122) {
+//       result[char] = true;
+//     }
+//   }
+//
+//   return Object.keys(result).length === ALPHABET_LENGTH;
+// }
+
 
 export const isPangram = (sentence) => {
-  let result = {}
-  for (let char of sentence.toLowerCase()) {
-    if (char.charCodeAt(0) >= 97 && char.charCodeAt(0) <= 122) {
-      result[char] = true;
-    }
-  }
-
-  return Object.keys(result).length === ALPHABET_LENGTH;
-}
+  let alphabet = [...'abcdefghijklmnopqrstuvwxyz'];
+  let lowerCaseSentence = sentence.toLowerCase();
+  return alphabet.every(character => lowerCaseSentence.includes(character));
+};

@@ -1,12 +1,14 @@
 // 1.
 export const isPangram = sentence => new Set(sentence.toLowerCase().match(/[a-z]/g)).size === 26
 
+
 // 2.
 export const isPangram = (sentence) => {
     let alphabet = [...'abcdefghijklmnopqrstuvwxyz'];
     let lowerCaseSentence = sentence.toLowerCase();
     return alphabet.every( character => lowerCaseSentence.includes(character));
 };
+
 
 // 3.
 const letters = 'abcdefghijklmnopqrstuvwxyz'.split('');
@@ -21,6 +23,7 @@ export const isPangram = (thingie) => {
 
   return true;
 };
+
 
 // 4.
 const ALPHABET_LENGTH = 26
