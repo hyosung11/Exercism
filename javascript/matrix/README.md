@@ -76,3 +76,8 @@ Warmup to the `saddle-points` warmup. [http://jumpstartlab.com](http://jumpstart
 
 It's possible to submit an incomplete solution so you can see how others have
 completed the exercise.
+
+## Mentor Comments
+You are honest ;-) And yes, this is it! Do you understand how all this works? The row parsing is easy enough but the matrix transpose is generally not understood at once and difficult to find for students...
+
+Now, I have nevertheless a remark: you do all computations in getter, this can be OK, but note that if the input is big it can lead to performance issues as getters are calculated each time we call them! Do you know how to do at most each of those computations?
