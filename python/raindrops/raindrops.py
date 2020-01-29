@@ -20,4 +20,3 @@ def convert(number):
 
     return str(result)
 
-print(convert(5005))
