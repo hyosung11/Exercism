@@ -3,5 +3,6 @@
         "activityBar.background": "#24320F",
         "titleBar.activeBackground": "#334615",
         "titleBar.activeForeground": "#F8FCF3"
-    }
+    },
+    "python.pythonPath": "/Users/hyosung11/.pyenv/versions/3.8.1/bin/python"
 }
